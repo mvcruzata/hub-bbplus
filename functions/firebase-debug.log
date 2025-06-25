@@ -83,7 +83,7 @@
 [debug] [2025-06-25T00:29:07.304Z] Building nodejs source
 [info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
 [debug] [2025-06-25T00:29:07.306Z] Could not find functions.yaml. Must use http discovery
-[debug] [2025-06-25T00:29:07.320Z] Found firebase-functions binary at '/Users/mvcruzata/Documents/Workspace/hub-bb+/functions/node_modules/.bin/firebase-functions'
+[debug] [2025-06-25T00:29:07.320Z] Found firebase-functions binary at '/Users/mvcruzata/Documents/Workspace/hub-bbplus/functions/node_modules/.bin/firebase-functions'
 [info] Serving at port 8493
 
 [debug] [2025-06-25T00:29:07.824Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
@@ -104,7 +104,7 @@
 [debug] [2025-06-25T00:29:13.113Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/odontobbapp/instances 200
 [debug] [2025-06-25T00:29:13.113Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/odontobbapp/instances {}
 [info] i  functions: preparing functions directory for uploading... 
-[info] i  functions: packaged /Users/mvcruzata/Documents/Workspace/hub-bb+/functions (94.56 KB) for uploading 
+[info] i  functions: packaged /Users/mvcruzata/Documents/Workspace/hub-bbplus/functions (94.56 KB) for uploading 
 [debug] [2025-06-25T00:29:13.167Z] Checked if tokens are valid: true, expires at: 1750814411410
 [debug] [2025-06-25T00:29:13.167Z] Checked if tokens are valid: true, expires at: 1750814411410
 [debug] [2025-06-25T00:29:13.167Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/odontobbapp/locations/-/functions [none]
@@ -340,7 +340,7 @@
 [debug] [2025-06-25T00:30:48.099Z] Building nodejs source
 [info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
 [debug] [2025-06-25T00:30:48.101Z] Could not find functions.yaml. Must use http discovery
-[debug] [2025-06-25T00:30:48.113Z] Found firebase-functions binary at '/Users/mvcruzata/Documents/Workspace/hub-bb+/functions/node_modules/.bin/firebase-functions'
+[debug] [2025-06-25T00:30:48.113Z] Found firebase-functions binary at '/Users/mvcruzata/Documents/Workspace/hub-bbplus/functions/node_modules/.bin/firebase-functions'
 [info] Serving at port 8912
 
 [debug] [2025-06-25T00:30:48.525Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
@@ -361,7 +361,7 @@
 [debug] [2025-06-25T00:30:53.874Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/odontobbapp/instances 200
 [debug] [2025-06-25T00:30:53.874Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/odontobbapp/instances {}
 [info] i  functions: preparing functions directory for uploading... 
-[info] i  functions: packaged /Users/mvcruzata/Documents/Workspace/hub-bb+/functions (94.56 KB) for uploading 
+[info] i  functions: packaged /Users/mvcruzata/Documents/Workspace/hub-bbplus/functions (94.56 KB) for uploading 
 [debug] [2025-06-25T00:30:53.928Z] Checked if tokens are valid: true, expires at: 1750814411410
 [debug] [2025-06-25T00:30:53.928Z] Checked if tokens are valid: true, expires at: 1750814411410
 [debug] [2025-06-25T00:30:53.928Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/odontobbapp/locations/-/functions [none]
@@ -472,7 +472,7 @@
 [debug] [2025-06-25T00:31:57.260Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/odontobbapp/adminSdkConfig [none]
 [debug] [2025-06-25T00:31:58.106Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/odontobbapp/adminSdkConfig 200
 [debug] [2025-06-25T00:31:58.106Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/odontobbapp/adminSdkConfig {"projectId":"odontobbapp","databaseURL":"https://odontobbapp-default-rtdb.firebaseio.com","storageBucket":"odontobbapp.appspot.com","locationId":"southamerica-east1"}
-[debug] [2025-06-25T00:31:58.138Z] [functions] Watching "/Users/mvcruzata/Documents/Workspace/hub-bb+/functions" for Cloud Functions...
+[debug] [2025-06-25T00:31:58.138Z] [functions] Watching "/Users/mvcruzata/Documents/Workspace/hub-bbplus/functions" for Cloud Functions...
 [debug] [2025-06-25T00:31:58.143Z] Validating nodejs source
 [debug] [2025-06-25T00:31:59.153Z] > [functions] package.json contents: {
   "name": "functions",
@@ -506,10 +506,10 @@
   "private": true
 }
 [debug] [2025-06-25T00:31:59.153Z] Building nodejs source
-[debug] [2025-06-25T00:31:59.154Z] Failed to find version of module node: reached end of search path /Users/mvcruzata/Documents/Workspace/hub-bb+/functions/node_modules
+[debug] [2025-06-25T00:31:59.154Z] Failed to find version of module node: reached end of search path /Users/mvcruzata/Documents/Workspace/hub-bbplus/functions/node_modules
 [warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
 [debug] [2025-06-25T00:31:59.157Z] Could not find functions.yaml. Must use http discovery
-[debug] [2025-06-25T00:31:59.166Z] Found firebase-functions binary at '/Users/mvcruzata/Documents/Workspace/hub-bb+/functions/node_modules/.bin/firebase-functions'
+[debug] [2025-06-25T00:31:59.166Z] Found firebase-functions binary at '/Users/mvcruzata/Documents/Workspace/hub-bbplus/functions/node_modules/.bin/firebase-functions'
 [info] Serving at port 8366
 
 [debug] [2025-06-25T00:31:59.683Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
@@ -517,8 +517,8 @@
 [debug] [2025-06-25T00:32:03.714Z] [functions[us-central1-helloWorld]] http function initialized (http://127.0.0.1:5001/odontobbapp/us-central1/helloWorld).
 [info] i  functions: Loaded functions: helloWorld 
 [warn] ⚠  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc, tasks 
-[debug] [2025-06-25T00:38:16.205Z] DEBUG: File /Users/mvcruzata/Documents/Workspace/hub-bb+/functions/lib/index.js.map changed, reloading triggers
-[debug] [2025-06-25T00:38:16.205Z] DEBUG: File /Users/mvcruzata/Documents/Workspace/hub-bb+/functions/lib/index.js changed, reloading triggers
+[debug] [2025-06-25T00:38:16.205Z] DEBUG: File /Users/mvcruzata/Documents/Workspace/hub-bbplus/functions/lib/index.js.map changed, reloading triggers
+[debug] [2025-06-25T00:38:16.205Z] DEBUG: File /Users/mvcruzata/Documents/Workspace/hub-bbplus/functions/lib/index.js changed, reloading triggers
 [debug] [2025-06-25T00:38:17.206Z] Validating nodejs source
 [debug] [2025-06-25T00:38:17.967Z] > [functions] package.json contents: {
   "name": "functions",
@@ -552,16 +552,16 @@
   "private": true
 }
 [debug] [2025-06-25T00:38:17.967Z] Building nodejs source
-[debug] [2025-06-25T00:38:17.968Z] Failed to find version of module node: reached end of search path /Users/mvcruzata/Documents/Workspace/hub-bb+/functions/node_modules
+[debug] [2025-06-25T00:38:17.968Z] Failed to find version of module node: reached end of search path /Users/mvcruzata/Documents/Workspace/hub-bbplus/functions/node_modules
 [warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
 [debug] [2025-06-25T00:38:17.969Z] Could not find functions.yaml. Must use http discovery
-[debug] [2025-06-25T00:38:17.970Z] Found firebase-functions binary at '/Users/mvcruzata/Documents/Workspace/hub-bb+/functions/node_modules/.bin/firebase-functions'
+[debug] [2025-06-25T00:38:17.970Z] Found firebase-functions binary at '/Users/mvcruzata/Documents/Workspace/hub-bbplus/functions/node_modules/.bin/firebase-functions'
 [info] Serving at port 8491
 
 [debug] [2025-06-25T00:38:18.435Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
 [debug] [2025-06-25T00:38:22.454Z] [functions] Loaded functions definitions from source: helloWorld.
-[debug] [2025-06-25T00:39:18.240Z] DEBUG: File /Users/mvcruzata/Documents/Workspace/hub-bb+/functions/lib/index.js.map changed, reloading triggers
-[debug] [2025-06-25T00:39:18.240Z] DEBUG: File /Users/mvcruzata/Documents/Workspace/hub-bb+/functions/lib/index.js changed, reloading triggers
+[debug] [2025-06-25T00:39:18.240Z] DEBUG: File /Users/mvcruzata/Documents/Workspace/hub-bbplus/functions/lib/index.js.map changed, reloading triggers
+[debug] [2025-06-25T00:39:18.240Z] DEBUG: File /Users/mvcruzata/Documents/Workspace/hub-bbplus/functions/lib/index.js changed, reloading triggers
 [debug] [2025-06-25T00:39:19.241Z] Validating nodejs source
 [debug] [2025-06-25T00:39:20.179Z] > [functions] package.json contents: {
   "name": "functions",
@@ -595,10 +595,10 @@
   "private": true
 }
 [debug] [2025-06-25T00:39:20.179Z] Building nodejs source
-[debug] [2025-06-25T00:39:20.180Z] Failed to find version of module node: reached end of search path /Users/mvcruzata/Documents/Workspace/hub-bb+/functions/node_modules
+[debug] [2025-06-25T00:39:20.180Z] Failed to find version of module node: reached end of search path /Users/mvcruzata/Documents/Workspace/hub-bbplus/functions/node_modules
 [warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
 [debug] [2025-06-25T00:39:20.181Z] Could not find functions.yaml. Must use http discovery
-[debug] [2025-06-25T00:39:20.182Z] Found firebase-functions binary at '/Users/mvcruzata/Documents/Workspace/hub-bb+/functions/node_modules/.bin/firebase-functions'
+[debug] [2025-06-25T00:39:20.182Z] Found firebase-functions binary at '/Users/mvcruzata/Documents/Workspace/hub-bbplus/functions/node_modules/.bin/firebase-functions'
 [info] Serving at port 8721
 
 [debug] [2025-06-25T00:39:20.667Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
