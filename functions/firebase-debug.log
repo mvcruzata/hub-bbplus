@@ -1,0 +1,605 @@
+[debug] [2025-06-25T00:28:50.130Z] ----------------------------------------------------------------------
+[debug] [2025-06-25T00:28:50.134Z] Command:       /Users/mvcruzata/.nvm/versions/node/v20.18.0/bin/node /Users/mvcruzata/.nvm/versions/node/v20.18.0/bin/firebase deploy --only functions
+[debug] [2025-06-25T00:28:50.134Z] CLI Version:   14.8.0
+[debug] [2025-06-25T00:28:50.134Z] Platform:      darwin
+[debug] [2025-06-25T00:28:50.134Z] Node Version:  v20.18.0
+[debug] [2025-06-25T00:28:50.134Z] Time:          Tue Jun 24 2025 19:28:50 GMT-0500 (Ecuador Time)
+[debug] [2025-06-25T00:28:50.135Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-25T00:28:50.388Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-25T00:28:50.389Z] > authorizing via signed-in user (mvcruzata@gmail.com)
+[debug] [2025-06-25T00:28:50.389Z] [iam] checking project odontobbapp for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2025-06-25T00:28:50.390Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:28:50.390Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:28:50.392Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp:testIamPermissions [none]
+[debug] [2025-06-25T00:28:50.392Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp:testIamPermissions x-goog-quota-user=projects/odontobbapp
+[debug] [2025-06-25T00:28:50.392Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-06-25T00:28:51.004Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp:testIamPermissions 200
+[debug] [2025-06-25T00:28:51.005Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-06-25T00:28:51.005Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:28:51.005Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:28:51.005Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/odontobbapp/serviceAccounts/odontobbapp@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2025-06-25T00:28:51.005Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/odontobbapp/serviceAccounts/odontobbapp@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2025-06-25T00:28:51.507Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/odontobbapp/serviceAccounts/odontobbapp@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2025-06-25T00:28:51.507Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/odontobbapp/serviceAccounts/odontobbapp@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'odontobbapp'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] ✔  functions: Finished running predeploy script. 
+[debug] [2025-06-25T00:29:04.540Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:04.540Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:04.541Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp [none]
+[debug] [2025-06-25T00:29:05.043Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp 200
+[debug] [2025-06-25T00:29:05.043Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp {"projectNumber":"626711514947","projectId":"odontobbapp","lifecycleState":"ACTIVE","name":"OdontoBbApp","labels":{"firebase":"enabled"},"createTime":"2021-01-28T16:32:24.243Z"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2025-06-25T00:29:05.045Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:05.045Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:05.046Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/odontobbapp/adminSdkConfig [none]
+[debug] [2025-06-25T00:29:05.773Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/odontobbapp/adminSdkConfig 200
+[debug] [2025-06-25T00:29:05.773Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/odontobbapp/adminSdkConfig {"projectId":"odontobbapp","databaseURL":"https://odontobbapp-default-rtdb.firebaseio.com","storageBucket":"odontobbapp.appspot.com","locationId":"southamerica-east1"}
+[debug] [2025-06-25T00:29:05.774Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:05.774Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:05.774Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/odontobbapp/configs [none]
+[debug] [2025-06-25T00:29:06.216Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/odontobbapp/configs 200
+[debug] [2025-06-25T00:29:06.216Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/odontobbapp/configs {}
+[debug] [2025-06-25T00:29:06.218Z] Validating nodejs source
+[debug] [2025-06-25T00:29:07.304Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2025-06-25T00:29:07.304Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2025-06-25T00:29:07.306Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-06-25T00:29:07.320Z] Found firebase-functions binary at '/Users/mvcruzata/Documents/Workspace/hub-bb+/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8493
+
+[debug] [2025-06-25T00:29:07.824Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] i  extensions: ensuring required API firebaseextensions.googleapis.com is enabled... 
+[debug] [2025-06-25T00:29:11.850Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-25T00:29:11.850Z] > authorizing via signed-in user (mvcruzata@gmail.com)
+[debug] [2025-06-25T00:29:11.850Z] [iam] checking project odontobbapp for permissions ["firebase.projects.get","firebaseextensions.instances.list"]
+[debug] [2025-06-25T00:29:11.850Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:11.850Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:11.851Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp:testIamPermissions [none]
+[debug] [2025-06-25T00:29:11.851Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp:testIamPermissions x-goog-quota-user=projects/odontobbapp
+[debug] [2025-06-25T00:29:11.851Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2025-06-25T00:29:12.346Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp:testIamPermissions 200
+[debug] [2025-06-25T00:29:12.346Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2025-06-25T00:29:12.346Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:12.346Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:12.349Z] >>> [apiv2][query] GET https://firebaseextensions.googleapis.com/v1beta/projects/odontobbapp/instances pageSize=100&pageToken=
+[debug] [2025-06-25T00:29:13.113Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/odontobbapp/instances 200
+[debug] [2025-06-25T00:29:13.113Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/odontobbapp/instances {}
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged /Users/mvcruzata/Documents/Workspace/hub-bb+/functions (94.56 KB) for uploading 
+[debug] [2025-06-25T00:29:13.167Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:13.167Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:13.167Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/odontobbapp/locations/-/functions [none]
+[debug] [2025-06-25T00:29:13.919Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/odontobbapp/locations/-/functions 200
+[debug] [2025-06-25T00:29:13.919Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/odontobbapp/locations/-/functions {}
+[debug] [2025-06-25T00:29:13.920Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:13.920Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:13.920Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/odontobbapp/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2025-06-25T00:29:14.470Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/odontobbapp/locations/-/functions 200
+[debug] [2025-06-25T00:29:14.470Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/odontobbapp/locations/-/functions {"functions":[{"name":"projects/odontobbapp/locations/us-central1/functions/helloWorld","buildConfig":{"runtime":"nodejs22","entryPoint":"helloWorld","source":{"storageSource":{"bucket":"gcf-v2-sources-626711514947-us-central1","object":"helloWorld/function-source.zip","generation":"1750807420901321"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/odontobbapp/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/odontobbapp/serviceAccounts/626711514947-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"state":"UNKNOWN","updateTime":"2025-06-25T00:23:45.272565697Z","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"acc06b32c5ff4bb0f66edb9479befa77786e3a34"},"stateMessages":[{"severity":"ERROR","type":"CloudRunServiceNotFound","message":"Cloud Run service projects/odontobbapp/locations/us-central1/services/helloworld for the function was not found. The function will not work correctly. Please redeploy."}],"environment":"GEN_2","url":"https://us-central1-odontobbapp.cloudfunctions.net/helloWorld","createTime":"2025-06-24T23:23:41.195031180Z","satisfiesPzi":true}]}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[debug] [2025-06-25T00:29:14.474Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:14.474Z] Checked if tokens are valid: true, expires at: 1750814411410
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2025-06-25T00:29:14.474Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:14.474Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:14.474Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/626711514947/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2025-06-25T00:29:14.474Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1beta1/projects/626711514947/services/pubsub.googleapis.com:generateServiceIdentity x-goog-quota-user=projects/626711514947
+[debug] [2025-06-25T00:29:14.474Z] >>> [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/626711514947/services/pubsub.googleapis.com:generateServiceIdentity {}
+[debug] [2025-06-25T00:29:14.475Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/626711514947/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2025-06-25T00:29:14.475Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1beta1/projects/626711514947/services/eventarc.googleapis.com:generateServiceIdentity x-goog-quota-user=projects/626711514947
+[debug] [2025-06-25T00:29:14.475Z] >>> [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/626711514947/services/eventarc.googleapis.com:generateServiceIdentity {}
+[debug] [2025-06-25T00:29:15.273Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/626711514947/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2025-06-25T00:29:15.273Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/626711514947/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-626711514947@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"115292926556707060206"}}
+[debug] [2025-06-25T00:29:15.284Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/626711514947/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2025-06-25T00:29:15.284Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/626711514947/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-626711514947@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"114413169304182992098"}}
+[debug] [2025-06-25T00:29:15.286Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:15.286Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:15.286Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp [none]
+[debug] [2025-06-25T00:29:15.431Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp 200
+[debug] [2025-06-25T00:29:15.431Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp {"projectNumber":"626711514947","projectId":"odontobbapp","lifecycleState":"ACTIVE","name":"OdontoBbApp","labels":{"firebase":"enabled"},"createTime":"2021-01-28T16:32:24.243Z"}
+[debug] [2025-06-25T00:29:15.431Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:15.431Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:15.431Z] >>> [apiv2][query] GET https://compute.googleapis.com/compute/v1/projects/626711514947 [none]
+[debug] [2025-06-25T00:29:15.729Z] <<< [apiv2][status] GET https://compute.googleapis.com/compute/v1/projects/626711514947 403
+[debug] [2025-06-25T00:29:15.729Z] <<< [apiv2][body] GET https://compute.googleapis.com/compute/v1/projects/626711514947 {"error":{"code":403,"message":"Compute Engine API has not been used in project 626711514947 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","errors":[{"message":"Compute Engine API has not been used in project 626711514947 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","domain":"usageLimits","reason":"accessNotConfigured","extendedHelp":"https://console.developers.google.com"}],"status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"consumer":"projects/626711514947","containerInfo":"626711514947","serviceTitle":"Compute Engine API","activationUrl":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947","service":"compute.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Compute Engine API has not been used in project 626711514947 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947"}]}]}}
+[debug] [2025-06-25T00:29:15.730Z] unable to look up default compute service account. Falling back to 626711514947-compute@developer.gserviceaccount.com. Error: {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":403,"message":"Compute Engine API has not been used in project 626711514947 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","errors":[{"message":"Compute Engine API has not been used in project 626711514947 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","domain":"usageLimits","reason":"accessNotConfigured","extendedHelp":"https://console.developers.google.com"}],"status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"consumer":"projects/626711514947","containerInfo":"626711514947","serviceTitle":"Compute Engine API","activationUrl":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947","service":"compute.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Compute Engine API has not been used in project 626711514947 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947"}]}]}},"response":{"statusCode":403}},"exit":1,"message":"Request to https://compute.googleapis.com/compute/v1/projects/626711514947 had HTTP Error: 403, Compute Engine API has not been used in project 626711514947 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":403}
+[debug] [2025-06-25T00:29:15.730Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:15.730Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:15.730Z] >>> [apiv2][query] GET https://compute.googleapis.com/compute/v1/projects/626711514947 [none]
+[debug] [2025-06-25T00:29:15.840Z] <<< [apiv2][status] GET https://compute.googleapis.com/compute/v1/projects/626711514947 403
+[debug] [2025-06-25T00:29:15.840Z] <<< [apiv2][body] GET https://compute.googleapis.com/compute/v1/projects/626711514947 {"error":{"code":403,"message":"Compute Engine API has not been used in project 626711514947 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","errors":[{"message":"Compute Engine API has not been used in project 626711514947 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","domain":"usageLimits","reason":"accessNotConfigured","extendedHelp":"https://console.developers.google.com"}],"status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"consumer":"projects/626711514947","serviceTitle":"Compute Engine API","activationUrl":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947","service":"compute.googleapis.com","containerInfo":"626711514947"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Compute Engine API has not been used in project 626711514947 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947"}]}]}}
+[debug] [2025-06-25T00:29:15.840Z] unable to look up default compute service account. Falling back to 626711514947-compute@developer.gserviceaccount.com. Error: {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":403,"message":"Compute Engine API has not been used in project 626711514947 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","errors":[{"message":"Compute Engine API has not been used in project 626711514947 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","domain":"usageLimits","reason":"accessNotConfigured","extendedHelp":"https://console.developers.google.com"}],"status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"consumer":"projects/626711514947","serviceTitle":"Compute Engine API","activationUrl":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947","service":"compute.googleapis.com","containerInfo":"626711514947"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Compute Engine API has not been used in project 626711514947 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947"}]}]}},"response":{"statusCode":403}},"exit":1,"message":"Request to https://compute.googleapis.com/compute/v1/projects/626711514947 had HTTP Error: 403, Compute Engine API has not been used in project 626711514947 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":403}
+[debug] [2025-06-25T00:29:15.841Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:15.841Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:15.841Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/odontobbapp/billingInfo [none]
+[debug] [2025-06-25T00:29:16.321Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/odontobbapp/billingInfo 200
+[debug] [2025-06-25T00:29:16.321Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/odontobbapp/billingInfo {"name":"projects/odontobbapp/billingInfo","projectId":"odontobbapp","billingAccountName":"billingAccounts/01562D-8433FB-3D9C56","billingEnabled":true}
+[debug] [2025-06-25T00:29:16.323Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:16.323Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:16.323Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/odontobbapp/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2025-06-25T00:29:16.664Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/odontobbapp/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2025-06-25T00:29:16.664Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/odontobbapp/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-626711514947.us-central1.cloudfunctions.appspot.com/12dca46d-9309-41dd-90ad-84d367c49504.zip?GoogleAccessId=service-626711514947@gcf-admin-robot.iam.gserviceaccount.com&Expires=1750813156&Signature=o0MX7ByJyRhxOchcua8FuKIHGOXAG0RwOtn1nj5%2FFx2RwvDOHQ8xtg6XEx%2BwzkwxSmCw3OBJRoRyr7kz3p20TJl91ATc10ItiPYqQTVAFHeKKQfV2wIBKU%2BygEBOR6KD04ljA9St%2BKNOapUoOMoCBoGLA4Rk58ZmRKDc9HVIlP6EngADB0csiE2ZVUn%2FPuOzdKY5QCWfmfssWQGLEQtzP%2FOH%2BZpj3XwphtBi7WYXKXXwgcMtspaQYvQCWrh8yVP%2F8m4quxMuMEa7qK2UF3ePbYqv55b%2FYiEzeX8jylKLG6a61Ww%2BaTfeAt%2Bkxg1w6igPWPwlKy%2BvFoUVZE%2BEgdwLaA%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-626711514947.us-central1.cloudfunctions.appspot.com","object":"12dca46d-9309-41dd-90ad-84d367c49504.zip"}}
+[debug] [2025-06-25T00:29:16.666Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-626711514947.us-central1.cloudfunctions.appspot.com/12dca46d-9309-41dd-90ad-84d367c49504.zip GoogleAccessId=service-626711514947%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1750813156&Signature=o0MX7ByJyRhxOchcua8FuKIHGOXAG0RwOtn1nj5%2FFx2RwvDOHQ8xtg6XEx%2BwzkwxSmCw3OBJRoRyr7kz3p20TJl91ATc10ItiPYqQTVAFHeKKQfV2wIBKU%2BygEBOR6KD04ljA9St%2BKNOapUoOMoCBoGLA4Rk58ZmRKDc9HVIlP6EngADB0csiE2ZVUn%2FPuOzdKY5QCWfmfssWQGLEQtzP%2FOH%2BZpj3XwphtBi7WYXKXXwgcMtspaQYvQCWrh8yVP%2F8m4quxMuMEa7qK2UF3ePbYqv55b%2FYiEzeX8jylKLG6a61Ww%2BaTfeAt%2Bkxg1w6igPWPwlKy%2BvFoUVZE%2BEgdwLaA%3D%3D
+[debug] [2025-06-25T00:29:16.666Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-626711514947.us-central1.cloudfunctions.appspot.com/12dca46d-9309-41dd-90ad-84d367c49504.zip [stream]
+[debug] [2025-06-25T00:29:17.311Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-626711514947.us-central1.cloudfunctions.appspot.com/12dca46d-9309-41dd-90ad-84d367c49504.zip 200
+[debug] [2025-06-25T00:29:17.312Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-626711514947.us-central1.cloudfunctions.appspot.com/12dca46d-9309-41dd-90ad-84d367c49504.zip [omitted]
+[info] ✔  functions: functions folder uploaded successfully 
+[info] i  functions: updating Node.js 22 (2nd Gen) function helloWorld(us-central1)... 
+[debug] [2025-06-25T00:29:17.318Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:17.318Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:17.318Z] >>> [apiv2][query] PATCH https://cloudfunctions.googleapis.com/v2/projects/odontobbapp/locations/us-central1/functions/helloWorld updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels
+[debug] [2025-06-25T00:29:17.318Z] >>> [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/odontobbapp/locations/us-central1/functions/helloWorld {"name":"projects/odontobbapp/locations/us-central1/functions/helloWorld","buildConfig":{"runtime":"nodejs22","entryPoint":"helloWorld","source":{"storageSource":{"bucket":"gcf-v2-uploads-626711514947.us-central1.cloudfunctions.appspot.com","object":"12dca46d-9309-41dd-90ad-84d367c49504.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"odontobbapp\",\"databaseURL\":\"https://odontobbapp-default-rtdb.firebaseio.com\",\"storageBucket\":\"odontobbapp.appspot.com\",\"locationId\":\"southamerica-east1\"}","GCLOUD_PROJECT":"odontobbapp","EVENTARC_CLOUD_EVENT_SOURCE":"projects/odontobbapp/locations/us-central1/services/helloWorld","FUNCTION_TARGET":"helloWorld","LOG_EXECUTION_ID":"true"},"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"c165d1fe9e2c76cfddd48465739254c3f6efd4e2"}}
+[debug] [2025-06-25T00:29:18.379Z] <<< [apiv2][status] PATCH https://cloudfunctions.googleapis.com/v2/projects/odontobbapp/locations/us-central1/functions/helloWorld 200
+[debug] [2025-06-25T00:29:18.380Z] <<< [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/odontobbapp/locations/us-central1/functions/helloWorld {"name":"projects/odontobbapp/locations/us-central1/operations/operation-1750811357649-6385a890a9bfd-958b79bc-ced275bc","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-06-25T00:29:18.412633781Z","target":"projects/odontobbapp/locations/us-central1/functions/helloWorld","verb":"update","cancelRequested":false,"apiVersion":"v2"},"done":false}
+[debug] [2025-06-25T00:29:18.380Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:18.380Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:18.380Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/odontobbapp/locations/us-central1/operations/operation-1750811357649-6385a890a9bfd-958b79bc-ced275bc [none]
+[debug] [2025-06-25T00:29:18.629Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/odontobbapp/locations/us-central1/operations/operation-1750811357649-6385a890a9bfd-958b79bc-ced275bc 200
+[debug] [2025-06-25T00:29:18.629Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/odontobbapp/locations/us-central1/operations/operation-1750811357649-6385a890a9bfd-958b79bc-ced275bc {"name":"projects/odontobbapp/locations/us-central1/operations/operation-1750811357649-6385a890a9bfd-958b79bc-ced275bc","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-06-25T00:29:18.412633781Z","target":"projects/odontobbapp/locations/us-central1/functions/helloWorld","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/odontobbapp/locations/us-central1/functions/helloWorld","buildConfig":{"runtime":"nodejs22","entryPoint":"helloWorld","source":{"storageSource":{"bucket":"gcf-v2-sources-626711514947-us-central1","object":"helloWorld/function-source.zip","generation":"1750811358355039"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/odontobbapp/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/odontobbapp/serviceAccounts/626711514947-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/odontobbapp/locations/us-central1/services/helloworld","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"odontobbapp\",\"databaseURL\":\"https://odontobbapp-default-rtdb.firebaseio.com\",\"storageBucket\":\"odontobbapp.appspot.com\",\"locationId\":\"southamerica-east1\"}","GCLOUD_PROJECT":"odontobbapp","EVENTARC_CLOUD_EVENT_SOURCE":"projects/odontobbapp/locations/us-central1/services/helloWorld","FUNCTION_TARGET":"helloWorld","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"626711514947-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"UNKNOWN","labels":{"firebase-functions-hash":"c165d1fe9e2c76cfddd48465739254c3f6efd4e2"},"stateMessages":[{"severity":"ERROR","type":"CloudRunServiceNotFound","message":"Cloud Run service projects/odontobbapp/locations/us-central1/services/helloworld for the function was not found. The function will not work correctly. Please redeploy."}],"environment":"GEN_2","url":"https://us-central1-odontobbapp.cloudfunctions.net/helloWorld","satisfiesPzi":true},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION"},"done":false}
+[debug] [2025-06-25T00:29:19.130Z] [update-default-us-central1-helloWorld] Retrying task index 0
+[debug] [2025-06-25T00:29:19.130Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:19.130Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:19.130Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/odontobbapp/locations/us-central1/operations/operation-1750811357649-6385a890a9bfd-958b79bc-ced275bc [none]
+[debug] [2025-06-25T00:29:19.436Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/odontobbapp/locations/us-central1/operations/operation-1750811357649-6385a890a9bfd-958b79bc-ced275bc 200
+[debug] [2025-06-25T00:29:19.436Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/odontobbapp/locations/us-central1/operations/operation-1750811357649-6385a890a9bfd-958b79bc-ced275bc {"name":"projects/odontobbapp/locations/us-central1/operations/operation-1750811357649-6385a890a9bfd-958b79bc-ced275bc","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-06-25T00:29:18.412633781Z","endTime":"2025-06-25T00:29:18.960620505Z","target":"projects/odontobbapp/locations/us-central1/functions/helloWorld","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/odontobbapp/locations/us-central1/functions/helloWorld","buildConfig":{"runtime":"nodejs22","entryPoint":"helloWorld","source":{"storageSource":{"bucket":"gcf-v2-sources-626711514947-us-central1","object":"helloWorld/function-source.zip","generation":"1750811358355039"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/odontobbapp/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/odontobbapp/serviceAccounts/626711514947-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/odontobbapp/locations/us-central1/services/helloworld","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"odontobbapp\",\"databaseURL\":\"https://odontobbapp-default-rtdb.firebaseio.com\",\"storageBucket\":\"odontobbapp.appspot.com\",\"locationId\":\"southamerica-east1\"}","GCLOUD_PROJECT":"odontobbapp","EVENTARC_CLOUD_EVENT_SOURCE":"projects/odontobbapp/locations/us-central1/services/helloWorld","FUNCTION_TARGET":"helloWorld","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"626711514947-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"UNKNOWN","labels":{"firebase-functions-hash":"c165d1fe9e2c76cfddd48465739254c3f6efd4e2"},"stateMessages":[{"severity":"ERROR","type":"CloudRunServiceNotFound","message":"Cloud Run service projects/odontobbapp/locations/us-central1/services/helloworld for the function was not found. The function will not work correctly. Please redeploy."}],"environment":"GEN_2","url":"https://us-central1-odontobbapp.cloudfunctions.net/helloWorld","satisfiesPzi":true},"stages":[{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION"},"done":true,"error":{"code":7,"message":"Could not build the function due to missing permissions. generic::permission_denied: Identity and Access Management (IAM) API has not been used in project odontobbapp before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/iam.googleapis.com/overview?project=odontobbapp then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."}}
+[debug] [2025-06-25T00:29:19.436Z] Got source token undefined for region us-central1
+[error] Could not build the function due to missing permissions. generic::permission_denied: Identity and Access Management (IAM) API has not been used in project odontobbapp before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/iam.googleapis.com/overview?project=odontobbapp then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+[debug] [2025-06-25T00:29:19.438Z] Total Function Deployment time: 2122
+[debug] [2025-06-25T00:29:19.438Z] 1 Functions Deployed
+[debug] [2025-06-25T00:29:19.438Z] 1 Functions Errored
+[debug] [2025-06-25T00:29:19.438Z] 0 Function Deployments Aborted
+[debug] [2025-06-25T00:29:19.438Z] Average Function Deployment time: 2121
+[info] 
+[info] Functions deploy had errors with the following functions:
+	helloWorld(us-central1)
+[debug] [2025-06-25T00:29:19.439Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[debug] [2025-06-25T00:29:19.439Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:19.439Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:29:19.440Z] >>> [apiv2][query] GET https://artifactregistry.googleapis.com/v1/projects/odontobbapp/locations/us-central1/repositories/gcf-artifacts [none]
+[debug] [2025-06-25T00:29:19.864Z] <<< [apiv2][status] GET https://artifactregistry.googleapis.com/v1/projects/odontobbapp/locations/us-central1/repositories/gcf-artifacts 200
+[debug] [2025-06-25T00:29:19.864Z] <<< [apiv2][body] GET https://artifactregistry.googleapis.com/v1/projects/odontobbapp/locations/us-central1/repositories/gcf-artifacts {"name":"projects/odontobbapp/locations/us-central1/repositories/gcf-artifacts","format":"DOCKER","description":"This repository is created and used by Cloud Functions for storing function docker images.","labels":{"goog-managed-by":"cloudfunctions"},"createTime":"2025-06-24T23:23:49.780544Z","updateTime":"2025-06-24T23:25:00.304701Z","mode":"STANDARD_REPOSITORY","cleanupPolicies":{"firebase-functions-cleanup":{"id":"firebase-functions-cleanup","action":"DELETE","condition":{"tagState":"ANY","olderThan":"86400s"}}},"vulnerabilityScanningConfig":{"lastEnableTime":"2025-06-24T23:23:41.382286232Z","enablementState":"SCANNING_DISABLED","enablementStateReason":"API containerscanning.googleapis.com is not enabled."},"satisfiesPzi":true,"registryUri":"us-central1-docker.pkg.dev/odontobbapp/gcf-artifacts"}
+[debug] [2025-06-25T00:29:19.865Z] Functions deploy failed.
+[debug] [2025-06-25T00:29:19.865Z] {
+  "endpoint": {
+    "id": "helloWorld",
+    "project": "odontobbapp",
+    "region": "us-central1",
+    "entryPoint": "helloWorld",
+    "platform": "gcfv2",
+    "runtime": "nodejs22",
+    "httpsTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "serviceAccount": null,
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "FIREBASE_CONFIG": "{\"projectId\":\"odontobbapp\",\"databaseURL\":\"https://odontobbapp-default-rtdb.firebaseio.com\",\"storageBucket\":\"odontobbapp.appspot.com\",\"locationId\":\"southamerica-east1\"}",
+      "GCLOUD_PROJECT": "odontobbapp",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/odontobbapp/locations/us-central1/services/helloWorld"
+    },
+    "codebase": "default",
+    "securityLevel": "SECURE_ALWAYS",
+    "cpu": 1,
+    "targetedByOnly": false,
+    "hash": "c165d1fe9e2c76cfddd48465739254c3f6efd4e2"
+  },
+  "op": "update",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "exit": 1,
+    "message": "Could not build the function due to missing permissions. generic::permission_denied: Identity and Access Management (IAM) API has not been used in project odontobbapp before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/iam.googleapis.com/overview?project=odontobbapp then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.",
+    "original": {
+      "code": 7,
+      "message": "Could not build the function due to missing permissions. generic::permission_denied: Identity and Access Management (IAM) API has not been used in project odontobbapp before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/iam.googleapis.com/overview?project=odontobbapp then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+    },
+    "status": 7,
+    "code": 7
+  }
+}
+[debug] [2025-06-25T00:29:19.866Z] Error: Failed to update function helloWorld in region us-central1
+    at /Users/mvcruzata/.nvm/versions/node/v20.18.0/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:399:19
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Fabricator.updateV2Function (/Users/mvcruzata/.nvm/versions/node/v20.18.0/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:388:32)
+    at async Fabricator.updateEndpoint (/Users/mvcruzata/.nvm/versions/node/v20.18.0/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:155:13)
+    at async handle (/Users/mvcruzata/.nvm/versions/node/v20.18.0/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:89:17)
+[error] 
+[error] Error: There was an error deploying functions
+[debug] [2025-06-25T00:30:33.041Z] ----------------------------------------------------------------------
+[debug] [2025-06-25T00:30:33.054Z] Command:       /Users/mvcruzata/.nvm/versions/node/v20.18.0/bin/node /Users/mvcruzata/.nvm/versions/node/v20.18.0/bin/firebase deploy
+[debug] [2025-06-25T00:30:33.054Z] CLI Version:   14.8.0
+[debug] [2025-06-25T00:30:33.055Z] Platform:      darwin
+[debug] [2025-06-25T00:30:33.055Z] Node Version:  v20.18.0
+[debug] [2025-06-25T00:30:33.055Z] Time:          Tue Jun 24 2025 19:30:33 GMT-0500 (Ecuador Time)
+[debug] [2025-06-25T00:30:33.055Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-25T00:30:33.252Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-25T00:30:33.252Z] > authorizing via signed-in user (mvcruzata@gmail.com)
+[debug] [2025-06-25T00:30:33.252Z] [iam] checking project odontobbapp for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2025-06-25T00:30:33.254Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:33.254Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:33.255Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp:testIamPermissions [none]
+[debug] [2025-06-25T00:30:33.255Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp:testIamPermissions x-goog-quota-user=projects/odontobbapp
+[debug] [2025-06-25T00:30:33.256Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-06-25T00:30:33.917Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp:testIamPermissions 200
+[debug] [2025-06-25T00:30:33.917Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-06-25T00:30:33.918Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:33.918Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:33.918Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/odontobbapp/serviceAccounts/odontobbapp@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2025-06-25T00:30:33.918Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/odontobbapp/serviceAccounts/odontobbapp@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2025-06-25T00:30:34.374Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/odontobbapp/serviceAccounts/odontobbapp@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2025-06-25T00:30:34.374Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/odontobbapp/serviceAccounts/odontobbapp@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'odontobbapp'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] ✔  functions: Finished running predeploy script. 
+[debug] [2025-06-25T00:30:45.547Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:45.547Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:45.547Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp [none]
+[debug] [2025-06-25T00:30:46.063Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp 200
+[debug] [2025-06-25T00:30:46.064Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp {"projectNumber":"626711514947","projectId":"odontobbapp","lifecycleState":"ACTIVE","name":"OdontoBbApp","labels":{"firebase":"enabled"},"createTime":"2021-01-28T16:32:24.243Z"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2025-06-25T00:30:46.066Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:46.066Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:46.066Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/odontobbapp/adminSdkConfig [none]
+[debug] [2025-06-25T00:30:46.697Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/odontobbapp/adminSdkConfig 200
+[debug] [2025-06-25T00:30:46.697Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/odontobbapp/adminSdkConfig {"projectId":"odontobbapp","databaseURL":"https://odontobbapp-default-rtdb.firebaseio.com","storageBucket":"odontobbapp.appspot.com","locationId":"southamerica-east1"}
+[debug] [2025-06-25T00:30:46.697Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:46.697Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:46.697Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/odontobbapp/configs [none]
+[debug] [2025-06-25T00:30:47.118Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/odontobbapp/configs 200
+[debug] [2025-06-25T00:30:47.118Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/odontobbapp/configs {}
+[debug] [2025-06-25T00:30:47.119Z] Validating nodejs source
+[debug] [2025-06-25T00:30:48.099Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2025-06-25T00:30:48.099Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2025-06-25T00:30:48.101Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-06-25T00:30:48.113Z] Found firebase-functions binary at '/Users/mvcruzata/Documents/Workspace/hub-bb+/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8912
+
+[debug] [2025-06-25T00:30:48.525Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] i  extensions: ensuring required API firebaseextensions.googleapis.com is enabled... 
+[debug] [2025-06-25T00:30:52.548Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-25T00:30:52.549Z] > authorizing via signed-in user (mvcruzata@gmail.com)
+[debug] [2025-06-25T00:30:52.549Z] [iam] checking project odontobbapp for permissions ["firebase.projects.get","firebaseextensions.instances.list"]
+[debug] [2025-06-25T00:30:52.549Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:52.549Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:52.549Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp:testIamPermissions [none]
+[debug] [2025-06-25T00:30:52.549Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp:testIamPermissions x-goog-quota-user=projects/odontobbapp
+[debug] [2025-06-25T00:30:52.549Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2025-06-25T00:30:53.055Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp:testIamPermissions 200
+[debug] [2025-06-25T00:30:53.055Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2025-06-25T00:30:53.055Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:53.055Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:53.057Z] >>> [apiv2][query] GET https://firebaseextensions.googleapis.com/v1beta/projects/odontobbapp/instances pageSize=100&pageToken=
+[debug] [2025-06-25T00:30:53.874Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/odontobbapp/instances 200
+[debug] [2025-06-25T00:30:53.874Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/odontobbapp/instances {}
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged /Users/mvcruzata/Documents/Workspace/hub-bb+/functions (94.56 KB) for uploading 
+[debug] [2025-06-25T00:30:53.928Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:53.928Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:53.928Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/odontobbapp/locations/-/functions [none]
+[debug] [2025-06-25T00:30:54.693Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/odontobbapp/locations/-/functions 200
+[debug] [2025-06-25T00:30:54.693Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/odontobbapp/locations/-/functions {}
+[debug] [2025-06-25T00:30:54.693Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:54.694Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:54.694Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/odontobbapp/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2025-06-25T00:30:55.213Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/odontobbapp/locations/-/functions 200
+[debug] [2025-06-25T00:30:55.213Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/odontobbapp/locations/-/functions {"functions":[{"name":"projects/odontobbapp/locations/us-central1/functions/helloWorld","buildConfig":{"runtime":"nodejs22","entryPoint":"helloWorld","source":{"storageSource":{"bucket":"gcf-v2-sources-626711514947-us-central1","object":"helloWorld/function-source.zip","generation":"1750807420901321"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/odontobbapp/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/odontobbapp/serviceAccounts/626711514947-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"state":"UNKNOWN","updateTime":"2025-06-25T00:29:18.968729335Z","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"c165d1fe9e2c76cfddd48465739254c3f6efd4e2"},"stateMessages":[{"severity":"ERROR","type":"CloudRunServiceNotFound","message":"Cloud Run service projects/odontobbapp/locations/us-central1/services/helloworld for the function was not found. The function will not work correctly. Please redeploy."}],"environment":"GEN_2","url":"https://us-central1-odontobbapp.cloudfunctions.net/helloWorld","createTime":"2025-06-24T23:23:41.195031180Z","satisfiesPzi":true}]}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[debug] [2025-06-25T00:30:55.217Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:55.217Z] Checked if tokens are valid: true, expires at: 1750814411410
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2025-06-25T00:30:55.218Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:55.218Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:55.218Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/626711514947/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2025-06-25T00:30:55.218Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1beta1/projects/626711514947/services/pubsub.googleapis.com:generateServiceIdentity x-goog-quota-user=projects/626711514947
+[debug] [2025-06-25T00:30:55.218Z] >>> [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/626711514947/services/pubsub.googleapis.com:generateServiceIdentity {}
+[debug] [2025-06-25T00:30:55.219Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/626711514947/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2025-06-25T00:30:55.219Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1beta1/projects/626711514947/services/eventarc.googleapis.com:generateServiceIdentity x-goog-quota-user=projects/626711514947
+[debug] [2025-06-25T00:30:55.219Z] >>> [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/626711514947/services/eventarc.googleapis.com:generateServiceIdentity {}
+[debug] [2025-06-25T00:30:55.942Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/626711514947/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2025-06-25T00:30:55.943Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/626711514947/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-626711514947@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"115292926556707060206"}}
+[debug] [2025-06-25T00:30:55.972Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/626711514947/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2025-06-25T00:30:55.972Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/626711514947/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-626711514947@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"114413169304182992098"}}
+[debug] [2025-06-25T00:30:55.974Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:55.974Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:55.974Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp [none]
+[debug] [2025-06-25T00:30:56.136Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp 200
+[debug] [2025-06-25T00:30:56.137Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp {"projectNumber":"626711514947","projectId":"odontobbapp","lifecycleState":"ACTIVE","name":"OdontoBbApp","labels":{"firebase":"enabled"},"createTime":"2021-01-28T16:32:24.243Z"}
+[debug] [2025-06-25T00:30:56.137Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:56.137Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:56.137Z] >>> [apiv2][query] GET https://compute.googleapis.com/compute/v1/projects/626711514947 [none]
+[debug] [2025-06-25T00:30:56.343Z] <<< [apiv2][status] GET https://compute.googleapis.com/compute/v1/projects/626711514947 403
+[debug] [2025-06-25T00:30:56.344Z] <<< [apiv2][body] GET https://compute.googleapis.com/compute/v1/projects/626711514947 {"error":{"code":403,"message":"Compute Engine API has not been used in project 626711514947 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","errors":[{"message":"Compute Engine API has not been used in project 626711514947 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","domain":"usageLimits","reason":"accessNotConfigured","extendedHelp":"https://console.developers.google.com"}],"status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"serviceTitle":"Compute Engine API","activationUrl":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947","service":"compute.googleapis.com","consumer":"projects/626711514947","containerInfo":"626711514947"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Compute Engine API has not been used in project 626711514947 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947"}]}]}}
+[debug] [2025-06-25T00:30:56.344Z] unable to look up default compute service account. Falling back to 626711514947-compute@developer.gserviceaccount.com. Error: {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":403,"message":"Compute Engine API has not been used in project 626711514947 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","errors":[{"message":"Compute Engine API has not been used in project 626711514947 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","domain":"usageLimits","reason":"accessNotConfigured","extendedHelp":"https://console.developers.google.com"}],"status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"serviceTitle":"Compute Engine API","activationUrl":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947","service":"compute.googleapis.com","consumer":"projects/626711514947","containerInfo":"626711514947"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Compute Engine API has not been used in project 626711514947 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947"}]}]}},"response":{"statusCode":403}},"exit":1,"message":"Request to https://compute.googleapis.com/compute/v1/projects/626711514947 had HTTP Error: 403, Compute Engine API has not been used in project 626711514947 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":403}
+[debug] [2025-06-25T00:30:56.344Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:56.344Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:56.345Z] >>> [apiv2][query] GET https://compute.googleapis.com/compute/v1/projects/626711514947 [none]
+[debug] [2025-06-25T00:30:56.454Z] <<< [apiv2][status] GET https://compute.googleapis.com/compute/v1/projects/626711514947 403
+[debug] [2025-06-25T00:30:56.454Z] <<< [apiv2][body] GET https://compute.googleapis.com/compute/v1/projects/626711514947 {"error":{"code":403,"message":"Compute Engine API has not been used in project 626711514947 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","errors":[{"message":"Compute Engine API has not been used in project 626711514947 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","domain":"usageLimits","reason":"accessNotConfigured","extendedHelp":"https://console.developers.google.com"}],"status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"serviceTitle":"Compute Engine API","service":"compute.googleapis.com","consumer":"projects/626711514947","activationUrl":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947","containerInfo":"626711514947"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Compute Engine API has not been used in project 626711514947 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947"}]}]}}
+[debug] [2025-06-25T00:30:56.454Z] unable to look up default compute service account. Falling back to 626711514947-compute@developer.gserviceaccount.com. Error: {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":403,"message":"Compute Engine API has not been used in project 626711514947 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","errors":[{"message":"Compute Engine API has not been used in project 626711514947 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","domain":"usageLimits","reason":"accessNotConfigured","extendedHelp":"https://console.developers.google.com"}],"status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"serviceTitle":"Compute Engine API","service":"compute.googleapis.com","consumer":"projects/626711514947","activationUrl":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947","containerInfo":"626711514947"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Compute Engine API has not been used in project 626711514947 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947"}]}]}},"response":{"statusCode":403}},"exit":1,"message":"Request to https://compute.googleapis.com/compute/v1/projects/626711514947 had HTTP Error: 403, Compute Engine API has not been used in project 626711514947 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=626711514947 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":403}
+[debug] [2025-06-25T00:30:56.455Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:56.455Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:56.455Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/odontobbapp/billingInfo [none]
+[debug] [2025-06-25T00:30:56.946Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/odontobbapp/billingInfo 200
+[debug] [2025-06-25T00:30:56.946Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/odontobbapp/billingInfo {"name":"projects/odontobbapp/billingInfo","projectId":"odontobbapp","billingAccountName":"billingAccounts/01562D-8433FB-3D9C56","billingEnabled":true}
+[info] i  functions: updating Node.js 22 (2nd Gen) function helloWorld(us-central1)... 
+[debug] [2025-06-25T00:30:56.950Z] Precondition failed. Cannot update a GCFv2 function without storage
+[debug] [2025-06-25T00:30:56.952Z] Total Function Deployment time: 1
+[debug] [2025-06-25T00:30:56.952Z] 1 Functions Deployed
+[debug] [2025-06-25T00:30:56.952Z] 1 Functions Errored
+[debug] [2025-06-25T00:30:56.952Z] 0 Function Deployments Aborted
+[debug] [2025-06-25T00:30:56.952Z] Average Function Deployment time: 0
+[info] 
+[info] Functions deploy had errors with the following functions:
+	helloWorld(us-central1)
+[debug] [2025-06-25T00:30:56.953Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[debug] [2025-06-25T00:30:56.953Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:56.953Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:30:56.954Z] >>> [apiv2][query] GET https://artifactregistry.googleapis.com/v1/projects/odontobbapp/locations/us-central1/repositories/gcf-artifacts [none]
+[debug] [2025-06-25T00:30:57.306Z] <<< [apiv2][status] GET https://artifactregistry.googleapis.com/v1/projects/odontobbapp/locations/us-central1/repositories/gcf-artifacts 200
+[debug] [2025-06-25T00:30:57.306Z] <<< [apiv2][body] GET https://artifactregistry.googleapis.com/v1/projects/odontobbapp/locations/us-central1/repositories/gcf-artifacts {"name":"projects/odontobbapp/locations/us-central1/repositories/gcf-artifacts","format":"DOCKER","description":"This repository is created and used by Cloud Functions for storing function docker images.","labels":{"goog-managed-by":"cloudfunctions"},"createTime":"2025-06-24T23:23:49.780544Z","updateTime":"2025-06-24T23:25:00.304701Z","mode":"STANDARD_REPOSITORY","cleanupPolicies":{"firebase-functions-cleanup":{"id":"firebase-functions-cleanup","action":"DELETE","condition":{"tagState":"ANY","olderThan":"86400s"}}},"vulnerabilityScanningConfig":{"lastEnableTime":"2025-06-24T23:23:41.382286232Z","enablementState":"SCANNING_DISABLED","enablementStateReason":"API containerscanning.googleapis.com is not enabled."},"satisfiesPzi":true,"registryUri":"us-central1-docker.pkg.dev/odontobbapp/gcf-artifacts"}
+[debug] [2025-06-25T00:30:57.306Z] Functions deploy failed.
+[debug] [2025-06-25T00:30:57.306Z] {}
+[debug] [2025-06-25T00:30:57.307Z] Error: Precondition failed
+    at Fabricator.updateV2Function (/Users/mvcruzata/.nvm/versions/node/v20.18.0/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:382:19)
+    at Fabricator.updateEndpoint (/Users/mvcruzata/.nvm/versions/node/v20.18.0/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:155:24)
+    at /Users/mvcruzata/.nvm/versions/node/v20.18.0/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:110:71
+    at handle (/Users/mvcruzata/.nvm/versions/node/v20.18.0/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:89:23)
+    at Fabricator.applyChangeset (/Users/mvcruzata/.nvm/versions/node/v20.18.0/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:110:26)
+    at /Users/mvcruzata/.nvm/versions/node/v20.18.0/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:69:40
+    at Array.map (<anonymous>)
+    at Fabricator.applyPlan (/Users/mvcruzata/.nvm/versions/node/v20.18.0/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:68:54)
+    at release (/Users/mvcruzata/.nvm/versions/node/v20.18.0/lib/node_modules/firebase-tools/lib/deploy/functions/release/index.js:76:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: There was an error deploying functions
+[debug] [2025-06-25T00:31:56.028Z] ----------------------------------------------------------------------
+[debug] [2025-06-25T00:31:56.032Z] Command:       /Users/mvcruzata/.nvm/versions/node/v20.18.0/bin/node /Users/mvcruzata/.nvm/versions/node/v20.18.0/bin/firebase functions:shell
+[debug] [2025-06-25T00:31:56.032Z] CLI Version:   14.8.0
+[debug] [2025-06-25T00:31:56.032Z] Platform:      darwin
+[debug] [2025-06-25T00:31:56.032Z] Node Version:  v20.18.0
+[debug] [2025-06-25T00:31:56.032Z] Time:          Tue Jun 24 2025 19:31:56 GMT-0500 (Ecuador Time)
+[debug] [2025-06-25T00:31:56.033Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-25T00:31:56.230Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-25T00:31:56.230Z] > authorizing via signed-in user (mvcruzata@gmail.com)
+[debug] [2025-06-25T00:31:56.230Z] [iam] checking project odontobbapp for permissions ["firebase.projects.get"]
+[debug] [2025-06-25T00:31:56.232Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:31:56.232Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:31:56.233Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp:testIamPermissions [none]
+[debug] [2025-06-25T00:31:56.234Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp:testIamPermissions x-goog-quota-user=projects/odontobbapp
+[debug] [2025-06-25T00:31:56.234Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-06-25T00:31:56.860Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp:testIamPermissions 200
+[debug] [2025-06-25T00:31:56.860Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/odontobbapp:testIamPermissions {"permissions":["firebase.projects.get"]}
+[warn] ⚠  functions: Functions Emulator unable to start on port 5000, starting on 5001 instead. {"metadata":{"emulator":{"name":"functions"},"message":"Functions Emulator unable to start on port 5000, starting on 5001 instead."}}
+[debug] [2025-06-25T00:31:57.248Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-06-25T00:31:57.257Z] defaultcredentials: writing to file /Users/mvcruzata/.config/firebase/mvcruzata_gmail_com_application_default_credentials.json
+[debug] [2025-06-25T00:31:57.260Z] DEBUG: Setting GAC to /Users/mvcruzata/.config/firebase/mvcruzata_gmail_com_application_default_credentials.json
+[debug] [2025-06-25T00:31:57.260Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:31:57.260Z] Checked if tokens are valid: true, expires at: 1750814411410
+[debug] [2025-06-25T00:31:57.260Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/odontobbapp/adminSdkConfig [none]
+[debug] [2025-06-25T00:31:58.106Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/odontobbapp/adminSdkConfig 200
+[debug] [2025-06-25T00:31:58.106Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/odontobbapp/adminSdkConfig {"projectId":"odontobbapp","databaseURL":"https://odontobbapp-default-rtdb.firebaseio.com","storageBucket":"odontobbapp.appspot.com","locationId":"southamerica-east1"}
+[debug] [2025-06-25T00:31:58.138Z] [functions] Watching "/Users/mvcruzata/Documents/Workspace/hub-bb+/functions" for Cloud Functions...
+[debug] [2025-06-25T00:31:58.143Z] Validating nodejs source
+[debug] [2025-06-25T00:31:59.153Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2025-06-25T00:31:59.153Z] Building nodejs source
+[debug] [2025-06-25T00:31:59.154Z] Failed to find version of module node: reached end of search path /Users/mvcruzata/Documents/Workspace/hub-bb+/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-06-25T00:31:59.157Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-06-25T00:31:59.166Z] Found firebase-functions binary at '/Users/mvcruzata/Documents/Workspace/hub-bb+/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8366
+
+[debug] [2025-06-25T00:31:59.683Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-06-25T00:32:03.713Z] [functions] Loaded functions definitions from source: helloWorld.
+[debug] [2025-06-25T00:32:03.714Z] [functions[us-central1-helloWorld]] http function initialized (http://127.0.0.1:5001/odontobbapp/us-central1/helloWorld).
+[info] i  functions: Loaded functions: helloWorld 
+[warn] ⚠  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc, tasks 
+[debug] [2025-06-25T00:38:16.205Z] DEBUG: File /Users/mvcruzata/Documents/Workspace/hub-bb+/functions/lib/index.js.map changed, reloading triggers
+[debug] [2025-06-25T00:38:16.205Z] DEBUG: File /Users/mvcruzata/Documents/Workspace/hub-bb+/functions/lib/index.js changed, reloading triggers
+[debug] [2025-06-25T00:38:17.206Z] Validating nodejs source
+[debug] [2025-06-25T00:38:17.967Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2025-06-25T00:38:17.967Z] Building nodejs source
+[debug] [2025-06-25T00:38:17.968Z] Failed to find version of module node: reached end of search path /Users/mvcruzata/Documents/Workspace/hub-bb+/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-06-25T00:38:17.969Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-06-25T00:38:17.970Z] Found firebase-functions binary at '/Users/mvcruzata/Documents/Workspace/hub-bb+/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8491
+
+[debug] [2025-06-25T00:38:18.435Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-06-25T00:38:22.454Z] [functions] Loaded functions definitions from source: helloWorld.
+[debug] [2025-06-25T00:39:18.240Z] DEBUG: File /Users/mvcruzata/Documents/Workspace/hub-bb+/functions/lib/index.js.map changed, reloading triggers
+[debug] [2025-06-25T00:39:18.240Z] DEBUG: File /Users/mvcruzata/Documents/Workspace/hub-bb+/functions/lib/index.js changed, reloading triggers
+[debug] [2025-06-25T00:39:19.241Z] Validating nodejs source
+[debug] [2025-06-25T00:39:20.179Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2025-06-25T00:39:20.179Z] Building nodejs source
+[debug] [2025-06-25T00:39:20.180Z] Failed to find version of module node: reached end of search path /Users/mvcruzata/Documents/Workspace/hub-bb+/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-06-25T00:39:20.181Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-06-25T00:39:20.182Z] Found firebase-functions binary at '/Users/mvcruzata/Documents/Workspace/hub-bb+/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8721
+
+[debug] [2025-06-25T00:39:20.667Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-06-25T00:39:24.700Z] [functions] Loaded functions definitions from source: helloWorld.
