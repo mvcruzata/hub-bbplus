@@ -3,7 +3,7 @@ import * as logger from "firebase-functions/logger";
 import * as admin from "firebase-admin";
 import {db} from "./index";
 
-export const payphonehook = onRequest(async (request, response) => {
+export const payhook = onRequest(async (request, response) => {
   try {
     if (request.method !== "POST") {
       response.status(405).json({error: "Método no permitido"});
