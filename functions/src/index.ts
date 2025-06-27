@@ -14,4 +14,6 @@ export const db = admin.firestore();
 
 // Re-export all functions from their respective files
 export {diagnosis} from "./diagnosis";
-export {payphonehook} from "./payphone";
+export {payphoneorder} from "./payphoneorder";
+export {payphonehook} from "./payphonehook";
+
