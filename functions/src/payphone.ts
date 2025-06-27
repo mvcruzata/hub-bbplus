@@ -1,7 +1,7 @@
 import { onRequest } from "firebase-functions/v2/https";
 import * as logger from "firebase-functions/logger";
 import * as admin from "firebase-admin";
-import { db } from "./index"; // O usa admin.firestore() directamente si prefieres
+import { db } from "./index";
 
 export const payphonehook = onRequest(async (request, response) => {
   try {
@@ -12,20 +12,14 @@ export const payphonehook = onRequest(async (request, response) => {
 
     const body = request.body;
 
-    const clientTransactionId =
-      body.clientTransactionId || body.transactionId || body.transaction?.clientTransactionId;
-    const transactionStatus =
-      body.transactionStatus || body.transaction?.transactionStatus || body.status;
+    const clientTransactionId = body.ClientTransactionId;
+    const transactionStatus = body.TransactionStatus;
 
     if (!clientTransactionId) {
-      response.status(400).json({ error: "clientTransactionId faltante" });
+      response.status(400).json({ error: "ClientTransactionId faltante" });
       return;
     }
 
-
-    
-    
-    
     const purchasesSnap = await db
       .collection("purchases")
       .where("clientTransactionId", "==", clientTransactionId)
