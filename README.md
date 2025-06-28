@@ -1,5 +1,24 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## YOLO AI Integration
+
+This project includes YOLO (You Only Look Once) object detection capabilities implemented as Firebase Functions. The integration provides:
+
+- Real-time object detection on uploaded images
+- Image management and storage
+- Batch processing capabilities
+- RESTful API endpoints for integration
+
+### YOLO Features
+
+- **Object Detection**: Detect and classify objects in images
+- **Image Upload**: Handle image uploads with automatic storage
+- **Batch Processing**: Process multiple images simultaneously
+- **Model Management**: Load and manage YOLO models efficiently
+- **Results Storage**: Save detection results and processed images
+
+See [YOLO_MIGRATION_DOCS.md](./YOLO_MIGRATION_DOCS.md) for detailed API documentation.
+
 ## Getting Started
 
 First, run the development server:
@@ -35,10 +54,45 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
+## Firebase Functions Deployment
 
-1.npm run build
-2.firebase deploy
+### Build and Deploy Functions
 
+```bash
+cd functions
+npm install
+npm run build
 firebase deploy --only functions
-firebase deploy --only hosting
+```
+
+### Deploy Specific Function
+
+```bash
+firebase deploy --only functions:yoloInference
+firebase deploy --only functions:imageUpload
+```
+
+### Local Development
+
+```bash
+# Start Firebase emulators
+firebase emulators:start --only functions
+
+# In another terminal, start Next.js dev server
+npm run dev
+```
+
+## Environment Variables
+
+Create a `.env.local` file in the root directory:
+
+```env
+FIREBASE_FUNCTION_BASE_URL=http://localhost:5001/your-project-id/us-central1
+NEXT_PUBLIC_FIREBASE_API_KEY=your-api-key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project-id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-project.appspot.com
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=123456789
+NEXT_PUBLIC_FIREBASE_APP_ID=1:123456789:web:abcdef
+```
 

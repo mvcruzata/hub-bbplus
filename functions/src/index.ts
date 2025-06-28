@@ -15,3 +15,7 @@ export const db = admin.firestore();
 // Re-export all functions from their respective files
 export {diagnosis} from "./diagnosis";
 export {payphonehook} from "./payphone";
+export {payhook} from "./pay";
+export {yoloInference, yoloModel} from "./yolo";
+export {imageUpload, imageManagement, batchImageProcessing} from
+  "./imageManagement";
